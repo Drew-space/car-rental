@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Link } from "lucide-react";
 
 export default function JoinCommunity() {
   return (
@@ -27,7 +27,7 @@ export default function JoinCommunity() {
             road.
           </p>
 
-          <a
+          <Link
             href="/cars"
             className="mt-8 inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-sm font-medium text-foreground hover:opacity-90 transition"
           >
@@ -35,7 +35,7 @@ export default function JoinCommunity() {
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-background">
               <ArrowRight className="h-4 w-4" />
             </span>
-          </a>
+          </Link>
 
           <div className="mt-6 h-2 w-2 rounded-sm bg-white/30" />
         </div>

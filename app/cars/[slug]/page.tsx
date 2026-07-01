@@ -84,15 +84,15 @@ export default async function CarDetailsPage({ params }: Props) {
             <Link href="/" className="hover:opacity-70">
               Home
             </Link>
-            <a href="/#about" className="hover:opacity-70">
+            <Link href="/#about" className="hover:opacity-70">
               About
-            </a>
+            </Link>
             <Link href="/cars" className="hover:opacity-70">
               All Cars
             </Link>
-            <a href="/#contact" className="hover:opacity-70">
+            <Link href="/#contact" className="hover:opacity-70">
               Contact
-            </a>
+            </Link>
           </nav>
           <button className="rounded-full bg-foreground text-background px-5 py-2 text-sm font-semibold hover:opacity-90 transition">
             Sign Up
