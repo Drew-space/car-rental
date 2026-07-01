@@ -73,6 +73,25 @@ export default function EditCarPage({
   });
 
   // ── Pre-fill once car loads ───────────────────────────────────────
+  // useEffect(() => {
+  //   if (!car) return;
+  //   setForm({
+  //     name: car.name,
+  //     tag: car.tag,
+  //     trans: car.trans,
+  //     seats: car.seats.toString(),
+  //     bags: car.bags.toString(),
+  //     rating: car.rating.toString(),
+  //     price: car.price.toString(),
+  //     description: car.description ?? "",
+  //     whatsapp: car.whatsapp ?? "",
+  //     phone: car.phone ?? "",
+  //     isPublished: car.isPublished,
+  //     isFeatured: car.isFeatured,
+  //   });
+  //   setExistingCoverUrl(car.coverImageUrl ?? null);
+  //   setExistingImageUrls(car.imageUrls ?? []);
+  // }, [car]);
   useEffect(() => {
     if (!car) return;
     setForm({
@@ -90,7 +109,9 @@ export default function EditCarPage({
       isFeatured: car.isFeatured,
     });
     setExistingCoverUrl(car.coverImageUrl ?? null);
-    setExistingImageUrls(car.imageUrls ?? []);
+    setExistingImageUrls(
+      (car.imageUrls ?? []).filter((url): url is string => url !== null),
+    );
   }, [car]);
 
   function set<K extends keyof typeof form>(key: K, value: (typeof form)[K]) {
