@@ -327,7 +327,7 @@ export const HeroLight = () => {
               </SignUpButton>
             </Show>
             <Show when="signed-in">
-              <UserButton afterSignOutUrl="/" />
+              <UserButton />
             </Show>
           </div>
         </div>

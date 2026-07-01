@@ -62,14 +62,14 @@ export const HeroDark = () => {
               </SignUpButton>
             </Show>
             <Show when="signed-in">
-              <UserButton afterSignOutUrl="/" />
+              <UserButton />
             </Show>
           </div>
 
           {/* Mobile nav trigger */}
           <div className="flex items-center gap-3 md:hidden">
             <Show when="signed-in">
-              <UserButton afterSignOutUrl="/" />
+              <UserButton />
             </Show>
             <Drawer direction="right">
               <DrawerTrigger asChild>
