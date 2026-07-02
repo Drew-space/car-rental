@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ArrowRight, Link } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function JoinCommunity() {
   return (
@@ -12,7 +13,6 @@ export default function JoinCommunity() {
           className="object-cover"
           priority={false}
         />
-        {/* Dark overlay to keep text legible over the image */}
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40" />
 

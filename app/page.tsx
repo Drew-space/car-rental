@@ -11,6 +11,7 @@ import SiteFooter from "@/components/home/SiteFooter";
 import JoinCommunity from "@/components/home/JoinCommunity";
 import MockTopPicks from "@/components/home/MockTopPicks";
 import { HeroDark } from "@/components/HeroDark";
+import PopularRentals from "@/components/home/PopularRentals";
 
 export default function HomePage() {
   const allCarsResult = useQuery(api.cars.getAllCars);
@@ -23,6 +24,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-background text-foreground">
       <HeroDark />
       <MockTopPicks />
+      <PopularRentals />
       {/* <TopPicks cars={allCars} isLoading={isLoading} /> */}
       <FeaturedCars cars={featuredCars} />
       <JoinCommunity />
